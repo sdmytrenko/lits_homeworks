@@ -17,10 +17,26 @@
     end
   end
 
-  class C1 # should be called in order => A,C,B
-    # your code goes here, for example
+  class C
+    # should be called in order => A,C,B
+    # include A
+    # prepend B
+
+    # should be called in order => A,B,C
     # include A
     # include B
+
+# should be called in order => B,A,C
+    # include B
+    # include A
+
+# should be called in order => C,B,A
+    # prepend B
+    # prepend A
+
+# should be called in order => C,A,B
+    prepend A
+    prepend B
 
     def hello
       super if defined?(super)
@@ -28,53 +44,9 @@
     end
   end
 
-  class C2 # should be called in order => A,B,C
-    # your code goes here, for example
-    include A
-    include B
-
-    def hello
-      super if defined?(super)
-      puts "hello from C"
-    end
-  end
-
-  class C3 # should be called in order => B,A,C
-    # your code goes here, for example
-    # include A
-    # include B
-
-    def hello # should be called in order => C,B,A
-      super if defined?(super)
-      puts "hello from C"
-    end
-  end
-
-  class C4
-    # your code goes here, for example
-    # include A
-    # include B
-
-    def hello
-      super if defined?(super)
-      puts "hello from C"
-    end
-  end
-
-  class C5 # should be called in order => C,A,B
-    # your code goes here, for example
-    # include A
-    # include B
-
-    def hello
-      super if defined?(super)
-      puts "hello from C"
-    end
-  end
-
-# c = C.new
-# C1.new.hello # should be called in order => A,C,B
-C2.new.hello # should be called in order => A,B,C #DONE
-#C3.new.hello # should be called in order => B,A,C
-# C4.new.hello # should be called in order => C,B,A
-# C5.new.hello # should be called in order => C,A,B
+c = C.new
+c.hello # should be called in order => A,C,B #DONE!
+        # should be called in order => A,B,C #DONE!
+        # should be called in order => B,A,C #DONE!
+        # should be called in order => C,B,A #DONE!
+        # should be called in order => C,A,B #DONE!

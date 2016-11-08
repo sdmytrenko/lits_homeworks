@@ -1,10 +1,10 @@
 class Mammal
-	def method_name
-		
+	def self.warm_blooded?
+		true
 	end
 end
 
-class Dog
+class Dog < Mammal
 	def self.closest_relative
 		"wolf"
 	end
@@ -31,4 +31,5 @@ end
 
 p snoopy.alter_ego
 p Dog.closest_relative
+p Dog.warm_blooded?
 p snoopy
