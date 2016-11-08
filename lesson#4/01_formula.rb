@@ -2,30 +2,30 @@ class Formula
 
 	def initialize(number)
 		@expression = number
-		@string = @expression.to_s
+		@string = "#{@expression}"
 	end
 
 	def add(number)
 		@expression += number
-		@string += '+' + number.to_s
+		@string += " + #{number}"
 		return @expression
 	end
 
 	def substract(number)
 		@expression -= number
-		@string += '-' + number.to_s
+		@string += " - #{number}"
 		return @expression
 	end
 
 	def divide(number)
 		@expression /= number
-		@string = "(" + @string + ")/" + number.to_s
+		@string = "(" + @string + ") / #{number}"
 		return @expression
 	end
 
 	def multiply(number)
 		@expression *= number
-		@string = "(" + @string + ")*" + number.to_s
+		@string = "(" + @string + ") * #{number}"
 		return @expression
 	end
 
