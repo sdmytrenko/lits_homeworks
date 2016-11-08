@@ -1,14 +1,20 @@
 class Formula
-	def initialize
-		
+
+	def initialize(number)
+		@expression = number
+		@string = @expression.to_s
 	end
 
-	def add
-		yield
+	def add(number)
+		@expression += number
+		@string += '+' + number.to_s
+		return @expression
 	end
 
-	def substract
-		yield
+	def substract(number)
+		@expression -= number
+		@string += '-' + number.to_s
+		return @expression
 	end
 
 	def divide
@@ -20,11 +26,20 @@ class Formula
 	end
 
 	def result
-		yield
+		@expression
 	end
 
 	def to_s
-		yield
+		@string
 	end
 
 end
+
+a = Formula.new 5
+p a.result
+p a.add 10
+p a.result
+p a.to_s
+p a.substract 3
+# p a.result
+# p a.to_s
