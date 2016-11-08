@@ -17,12 +17,16 @@ class Formula
 		return @expression
 	end
 
-	def divide
-		yield
+	def divide(number)
+		@expression /= number
+		@string = "(" + @string + ")/" + number.to_s
+		return @expression
 	end
 
-	def multiply
-		yield
+	def multiply(number)
+		@expression *= number
+		@string = "(" + @string + ")*" + number.to_s
+		return @expression
 	end
 
 	def result
@@ -41,5 +45,20 @@ p a.add 10
 p a.result
 p a.to_s
 p a.substract 3
-# p a.result
-# p a.to_s
+p a.to_s
+
+p a.divide 6
+p a.to_s
+
+p a.add 8
+p a.to_s
+
+p a.multiply 8
+p a.to_s
+
+a.substract 12
+a.divide 2
+a.add 7
+a.multiply 3
+p a.result
+p a.to_s
