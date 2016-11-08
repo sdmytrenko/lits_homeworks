@@ -9,6 +9,5 @@
 [*посилання на весь проект*](https://github.com/sdmytrenko/calc)
 
 ######`Lesson #4`
-- `prepend_include.rb` - використання методів #prepend і #include [*умова задачі*](https://gist.github.com/arsenslyusarchuk/809d2c4fd6541c6738ab)
-- `01_formula.rb` - клас Formula, конструктор якого приймає число і обробляє його наступними методами: add, subtract, divide, multiply, result, to_s
-[*умова задачі*](https://gist.github.com/kunik/f624263e0361e61e2e0a)
+- `prepend_include.rb` - використання методів #prepend і #include, [*умова задачі*](https://gist.github.com/arsenslyusarchuk/809d2c4fd6541c6738ab)
+- `01_formula.rb` - клас Formula, [*умова задачі*](https://gist.github.com/kunik/f624263e0361e61e2e0a)
