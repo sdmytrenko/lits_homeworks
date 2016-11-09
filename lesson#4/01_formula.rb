@@ -39,16 +39,16 @@ class Formula
 	end
 end
 
-a = Formula.new 5
-a.add 10
-a.result
-a.substract 3
-a.divide 6
-a.add 8
-a.multiply 8
-a - 12
-a / 2
-a + 7
-a * 3
-p a.result
-p a.to_s
+# a = Formula.new 5
+# a.add 10
+# a.result
+# a.substract 3
+# a.divide 6
+# a.add 8
+# a.multiply 8
+# a - 12
+# a / 2
+# a + 7
+# a * 3
+# p a.result
+# p a.to_s

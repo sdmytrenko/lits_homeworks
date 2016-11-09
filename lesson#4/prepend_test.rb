@@ -13,7 +13,7 @@ end
 
 class Bar < Foo
 	# include FooBar
-	 prepend FooBar
+	prepend FooBar
 
 	def hello
 		puts 'Bar'
@@ -22,4 +22,16 @@ class Bar < Foo
 end
 
 Bar.new.hello
+
+# Варіант з include FooBar:
+# > Bar
+# > module Foobar
+# > class Foo
+
+
+
+
+
+# Варіант з prepend FooBar
+
 

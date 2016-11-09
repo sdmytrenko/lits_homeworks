@@ -2,6 +2,7 @@ module Sortable
   def sort_by(sort_expression)
     #.sort_by {|element| element.fetch(:b, :a)}
     puts 'test'
+    self
   end
 end
 
@@ -41,4 +42,5 @@ p a.inspect
 # p a.bulk_insert({a: 2, b: 4, c:1})
 # p a.elements
 p a.sort_by(:a).elements
+
 
