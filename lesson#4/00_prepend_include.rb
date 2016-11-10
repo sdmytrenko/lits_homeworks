@@ -19,8 +19,8 @@
 
   class C
     # should be called in order => A,C,B
-    # include A
-    # prepend B
+    include A
+    prepend B
 
     # should be called in order => A,B,C
     # include A
@@ -35,8 +35,8 @@
     # prepend A
 
 # should be called in order => C,A,B
-    prepend A
-    prepend B
+    # prepend A
+    # prepend B
 
     def hello
       super if defined?(super)
