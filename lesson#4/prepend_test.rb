@@ -12,8 +12,8 @@ class Foo
 end
 
 class Bar < Foo
-	# include FooBar
-	prepend FooBar
+	include FooBar
+	# prepend FooBar
 
 	def hello
 		puts 'Bar'

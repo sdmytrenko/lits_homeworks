@@ -3,21 +3,21 @@
   # Hint: class method #ancestors should help you to understand ancestors chain in different cases
   # Good Luck!
   
-  module A
-    def hello
-      super if defined?(super)
-      puts "hello from A"
-    end
+module A
+  def hello
+    super if defined?(super)
+    puts "hello from A"
   end
+end
 
-  module B
-    def hello
-      super if defined?(super)
-      puts "hello from B"
-    end
+module B
+  def hello
+    super if defined?(super)
+    puts "hello from B"
   end
+end
 
-  class C
+class C
     # should be called in order => A,C,B
     include A
     prepend B
@@ -38,11 +38,11 @@
     # prepend A
     # prepend B
 
-    def hello
-      super if defined?(super)
-      puts "hello from C"
-    end
+  def hello
+    super if defined?(super)
+    puts "hello from C"
   end
+end
 
 c = C.new
 c.hello # should be called in order => A,C,B #DONE!
@@ -50,3 +50,4 @@ c.hello # should be called in order => A,C,B #DONE!
         # should be called in order => B,A,C #DONE!
         # should be called in order => C,B,A #DONE!
         # should be called in order => C,A,B #DONE!
+p C.ancestors

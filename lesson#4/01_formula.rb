@@ -1,7 +1,7 @@
 class Formula
 
 	def initialize(number)
-		@expression = number
+		@expression = number 
 		@string = "#{@expression}"
 	end
 
@@ -40,8 +40,10 @@ class Formula
 end
 
 # a = Formula.new 5
-# a.add 10
-# a.result
+# a.to_s
+# p a.add 10
+# p a.result
+# p a.to_s
 # a.substract 3
 # a.divide 6
 # a.add 8

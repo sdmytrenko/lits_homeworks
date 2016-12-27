@@ -3,7 +3,8 @@ module Sortable
     # obj.sort_by {|element| element.fetch()}
     # arr.sort_by {|element| element.fetch(:a)}
     # self
-    @elements.sort_by {|x| x.fetch obj}
+    # @elements.sort_by {|x| x.fetch obj}
+    #@elements.sort! {a, b}
     self
   end
 end
