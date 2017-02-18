@@ -1,24 +1,24 @@
 module FooBar
-	def hello
-		puts "module Foobar"
-		super
-	end
+  def hello
+    puts "module Foobar"
+    super
+  end
 end
 
 class Foo
-	def hello
-		puts 'class Foo'
-	end
+  def hello
+    puts 'class Foo'
+  end
 end
 
 class Bar < Foo
-	include FooBar
-	# prepend FooBar
+  include FooBar
+  # prepend FooBar
 
-	def hello
-		puts 'Bar'
-		super
-	end
+  def hello
+    puts 'Bar'
+    super
+  end
 end
 
 Bar.new.hello

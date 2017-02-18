@@ -1,42 +1,42 @@
 class Formula
 
-	def initialize(number)
-		@expression = number 
-		@string = "#{@expression}"
-	end
+  def initialize(number)
+    @expression = number 
+    @string = "#{@expression}"
+  end
 
-	def add(number)
-		@string += " + #{number}"
-		@expression += number
-	end
+  def add(number)
+    @string += " + #{number}"
+    @expression += number
+  end
 
-	def substract(number)
-		@string += " - #{number}"
-		@expression -= number
-	end
+  def substract(number)
+    @string += " - #{number}"
+    @expression -= number
+  end
 
-	def divide(number)
-		@string = "(" + @string + ") / #{number}"
-		@expression /= number
-	end
+  def divide(number)
+    @string = "(" + @string + ") / #{number}"
+    @expression /= number
+  end
 
-	def multiply(number)
-		@string = "(" + @string + ") * #{number}"
-		@expression *= number
-	end
+  def multiply(number)
+    @string = "(" + @string + ") * #{number}"
+    @expression *= number
+  end
 
-	alias :+ :add
-	alias :- :substract
-	alias :/ :divide
-	alias :* :multiply
+  alias :+ :add
+  alias :- :substract
+  alias :/ :divide
+  alias :* :multiply
 
-	def result
-		@expression
-	end
+  def result
+    @expression
+  end
 
-	def to_s
-		@string
-	end
+  def to_s
+    @string
+  end
 end
 
 # a = Formula.new 5
